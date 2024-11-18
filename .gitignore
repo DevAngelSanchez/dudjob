@@ -1,0 +1,57 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias y módulos
+node_modules/
+bower_components/
+
+# Compilación/Salida
+dist/
+build/
+.out/
+*.tsbuildinfo
+
+# Archivos temporales y backups
+*.tmp
+*.swp
+*.bak
+*.sublime-project
+*.sublime-workspace
+
+# Configuración IDE/Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Entornos y secretos
+.env
+.env.*.local
+
+# Paquetes
+*.tgz
+
+# Archivos generados por el sistema
+package-lock.json
+yarn.lock
+pnp.*.cjs
+
+# Archivos de cobertura
+coverage/
+*.lcov
+
+# Archivos relacionados con testing
+.jest/
+*.spec.*
+*.test.*
+
+# Otros
+*.iml
+*.class
