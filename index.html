@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dudjob</title>
+  <link rel="icon" href="/public/assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-[#333333]">
+  <header class="flex flex-col sticky top-0 w-full z-50 bg-white">
+    <div
+      class="min-h-[70px] max-w-[1600px] mx-auto my-0 w-full flex flex-col items-center justify-center pt-0 px-5 md:px-[50px] tablet:px-[100px]">
+      <div
+        class="flex items-center justify-between flex-col small-mobile:flex-row gap-0 small-mobile:gap-2 relative w-full">
+        <div class="flex gap-1 items-center">
+          <a href="/">
+            <img src="/public/assets/img/logo.svg" alt="Logo">
+          </a>
+        </div>
+
+        <form action="" class="w-full max-w-[600px] flex-1 hidden small-mobile:flex ">
+          <div
+            class="relative flex items-center gap-0 border bg-[#F9F9F9] border-[#EBEBEB] rounded-md focus-within:border-[#FB6F92] w-full">
+            <input type="search" placeholder="Search by model name or user" name="header-search" id="header-search"
+              autocomplete="off"
+              class="h-10 rounded-md py-3 px-5 outline-none transition-colors duration-200 w-full text-sm text-[#333333] bg-white focus:bg-[#F7F7FE]">
+            <button type="submit" class="h-10 min-w-10 border-none bg-transparent outline-none cursor-pointer">
+              <i class="fa-solid fa-magnifying-glass" style="color: #999999;"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="flex items-center justify-end gap-2">
+          <div class="hidden tablet:flex">
+            <a href="/"
+              class="flex items-center justify-center gap-2 w-fit rounded-md outline-none duration-300 transition relative z-[1] font-semibold bg-white border border-[#cccccc] py-2 px-5 h-10 hover:shadow-sm shadow-black/5 hover:brightness-110 hover:border-gray-500">
+              <i class="fa-solid fa-rocket" style="color: #999999;"></i>
+              <span>Discover</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full hidden md:flex items-center justify-center bg-[#fff5f8]">
+      <div class="w-full flex items-center justify-center gap-2.5 py-0 px-[100px] h-10 max-w-[1600px] my-0 mx-auto">
+        <div class="flex items-center justify-center gap-1 pb-0 w-full">
+          <a href="#" class="text-[#2b2640] py-2.5 px-4 whitespace-nowrap font-bold">Ranking</a>
+          <a href="#" class="text-[#2b2640] py-2.5 px-4 whitespace-nowrap font-bold">Free Trial</a>
+          <a href="#" class="text-[#2b2640] py-2.5 px-4 whitespace-nowrap font-bold">Category</a>
+          <a href="#" class="text-[#2b2640] py-2.5 px-4 whitespace-nowrap font-bold">Onlyfans</a>
+          <a href="#" class="text-[#2b2640] py-2.5 px-4 whitespace-nowrap font-bold">By Country</a>
+          <a href="#" class="text-[#2b2640] py-2.5 px-4 whitespace-nowrap font-bold">Near Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex flex-col w-full min-h-[calc(100vh - 250px - 70px - 40px)] relative z-[1] pb-[70px]">
+    <section class="w-full h-auto relative transition duration-500 ease-linear">
+      <div
+        class="flex justify-center items-center flex-wrap w-full py-0 px-5 md:px-[50px] tablet:px-[100px] max-w-[1600px] my-0 mx-auto relative">
+        <div
+          class="flex flex-col items-center gap-2.5 pt-5 md:pt-10 pb-2.5 md:pb-5 before:absolute before:h-[100px] before:w-[70%] before:bg-[radial-gradient(circle, #FFD6E0 0%, rgba(21, 21, 30, 0) 100%)] before:rounded-full before:bottom-full before:shadow-[#FFD6E0] before:shadow-2xl before:-z-[1]">
+          <h1 class="text-xl md:text-2xl tablet:text-3xl font-bold relative m-0 z-[1] text-center">
+            Titulo de pagina
+          </h1>
+          <p class="text-center text-[#555555] text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Dolor, ipsum itaque, in recusandae
+            voluptatibus harum mollitia debitis porro quasi magnam fuga quod nobis natus provident ullam esse vero quae
+            culpa?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full h-auto relative transition duration-500 ease-linear">
+      <div
+        class="flex justify-center items-center flex-wrap w-full py-0 px-5 md:px-[50px] tablet:px-[100px] max-w-[1600px] my-0 mx-auto relative">
+        <div class="flex flex-col gap-5 w-full py-5 px-0">
+          <div class="flex items-center justify-between gap-5">
+            <h2 class="font-bold text-lg md:text-xl tablet:text-2xl">
+              <a href="#">Top Models</a>
+            </h2>
+            <a href="#"
+              class="bg-white border border-[#ebebeb] flex items-center gap-2 font-bold py-1 px-2.5 rounded-md text-base">
+              View All
+              <i class="fa-solid fa-up-right-from-square pointer-events-none text-sm" style="color: #555555;"></i>
+            </a>
+          </div>
+          <div class="-mt-4">
+            <p class="leading-tight">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum delectus dolor tempora minima architecto sed
+              cupiditate ratione rerum recusandae eius!
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 tablet:grid-cols-4 w-full gap-2.5 md:gap-5">
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <div class="absolute -left-9 top-4 -rotate-45 bg-[#ffb72b]">
+                  <p class="text-xs py-2 px-0 leading-none font-bold w-[130px] text-center">FREE TRIAL</p>
+                </div>
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-1.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Dasha Dori
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @dashenka18
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <div class="absolute -left-9 top-4 -rotate-45 bg-[#ffb72b]">
+                  <p class="text-xs py-2 px-0 leading-none font-bold w-[130px] text-center">FREE TRIAL</p>
+                </div>
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-2.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    My Last Flight
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @u190622292
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <div class="absolute -left-9 top-4 -rotate-45 bg-[#FFB3C6]">
+                  <p class="text-xs py-2 px-0 leading-none font-bold w-[130px] text-center">FREE</p>
+                </div>
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-3.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Darina
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @darilady
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <div class="absolute -left-9 top-4 -rotate-45 bg-[#ffb72b]">
+                  <p class="text-xs py-2 px-0 leading-none font-bold w-[130px] text-center">FREE TRIAL</p>
+                </div>
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-4.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Zeendyx
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @zeendyx
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-3.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Darina
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @darilady
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-1.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Dasha Dori
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @dashenka18
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <div class="absolute -left-9 top-4 -rotate-45 bg-[#ffb72b]">
+                  <p class="text-xs py-2 px-0 leading-none font-bold w-[130px] text-center">FREE TRIAL</p>
+                </div>
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-4.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Zeendyx
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @zeendyx
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <div class="absolute -left-9 top-4 -rotate-45 bg-[#ffb72b]">
+                  <p class="text-xs py-2 px-0 leading-none font-bold w-[130px] text-center">FREE TRIAL</p>
+                </div>
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-2.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    My Last Flight
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @u190622292
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full h-auto relative transition duration-500 ease-linear">
+      <div
+        class="flex justify-center items-center flex-wrap w-full py-0 px-5 md:px-[50px] tablet:px-[100px] max-w-[1600px] my-0 mx-auto relative">
+        <div class="flex flex-col gap-5 w-full py-5 px-0">
+          <div class="flex items-center justify-between gap-5">
+            <h2 class="font-bold text-lg md:text-xl tablet:text-2xl">
+              <a href="#">New Accounts</a>
+            </h2>
+            <a href="#"
+              class="bg-white border border-[#ebebeb] flex items-center gap-2 font-bold py-1 px-2.5 rounded-md text-base">
+              View All
+              <i class="fa-solid fa-up-right-from-square pointer-events-none text-sm" style="color: #555555;"></i>
+            </a>
+          </div>
+          <div class="-mt-4">
+            <p class="leading-tight">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum delectus dolor tempora minima architecto sed
+              cupiditate ratione rerum recusandae eius!
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 tablet:grid-cols-4 w-full gap-2.5 md:gap-5">
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-1.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Dasha Dori
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @dashenka18
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-2.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    My Last Flight
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @u190622292
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-3.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Darina
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @darilady
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-4.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Zeendyx
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @zeendyx
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-3.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Darina
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @darilady
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-1.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Dasha Dori
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @dashenka18
+                  </p>
+                </div>
+                <p class="p-1 bg-[#0083b31a] text-[#003447] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    $ 24.99
+                  </strong>
+                  /mo
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-4.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    Zeendyx
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @zeendyx
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-white flex flex-col overflow-hidden cursor-pointer transition" itemscope
+              itemtype="http://schema.org/Person">
+              <meta itemprop="url" content="https://onlyfans.com/dashenka18">
+              <div class="relative overflow-hidden">
+                <picture class="flex aspect-square rounded-md overflow-hidden">
+                  <img src="/public/assets/img/model-2.png" alt="Fotos de Dasha Dori" itemprop="image"
+                    class="w-full h-full object-cover">
+                </picture>
+              </div>
+              <div class="flex items-center justify-between gap-2.5 py-2.5 px-0">
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-semibold text-lg md:text-xl tablet:text-2xl leading-none break-all overflow-hidden"
+                    itemprop="name">
+                    My Last Flight
+                  </h3>
+                  <p class="text-[#555555] leading-none overflow-hidden text-base">
+                    @u190622292
+                  </p>
+                </div>
+                <p class="p-1 bg-[#FFB72B]/50 text-[#333333] rounded-md text-base">
+                  <strong class="whitespace-nowrap" itemprop="price">
+                    Free Trial
+                  </strong>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full h-auto relative transition duration-500 ease-linear">
+      <div
+        class="flex justify-center items-center flex-wrap w-full py-0 px-5 md:px-[50px] tablet:px-[100px] max-w-[1600px] my-0 mx-auto relative">
+        <div class="flex flex-col gap-5 w-full py-5 px-0">
+          <div class="flex items-center justify-between gap-5">
+            <h2 class="font-bold text-lg md:text-xl tablet:text-2xl">
+              <a href="#">Popular Categories</a>
+            </h2>
+            <a href="#"
+              class="bg-white border border-[#ebebeb] flex items-center gap-2 font-bold py-1 px-2.5 rounded-md text-base">
+              View All
+              <i class="fa-solid fa-up-right-from-square pointer-events-none text-sm" style="color: #555555;"></i>
+            </a>
+          </div>
+          <div class="-mt-4">
+            <p class="leading-tight">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum delectus dolor tempora minima architecto sed
+              cupiditate ratione rerum recusandae eius!
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 tablet:grid-cols-4 w-full gap-5">
+            <a href="javascript:void(0)"
+              class="relative bg-[#efb7481a] flex items-center p-[15px] border border-[#ffb72b] rounded-lg gap-5 hover:shadow-md transition"
+              aria-labelledby="category-1">
+              <div class="flex flex-col gap-1">
+                <h3 id="category-1" class="leading-none font-semibold text-base">
+                  Free Trial Onlyfans
+                </h3>
+                <p class="text-base leading-tight">This is the most extensive list of Free OnlyFans with more than 1M
+                  accounts!</p>
+                <span class="text-[14px] leading-none font-bold text-[#555555]">+800k accounts</span>
+              </div>
+              <div class="size-[30px] min-w-[30px] bg-[#ffb72b] rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-arrow-right-long text-sm" style="color: #ffffff;"></i>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative bg-[#05ace81a] flex items-center p-[15px] border border-[#05AAE8] rounded-lg gap-5 hover:shadow-md transition"
+              aria-labelledby="category-2">
+              <div class="flex flex-col gap-1">
+                <h3 id="category-2" class="leading-none font-semibold text-base">
+                  Free Account Onlyfans
+                </h3>
+                <p class="text-base leading-tight">This is the most extensive list of Free OnlyFans with more than 1M
+                  accounts!</p>
+                <span class="text-[14px] leading-none font-bold text-[#555555]">+800k accounts</span>
+              </div>
+              <div class="size-[30px] min-w-[30px] bg-[#05AAE8] rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-arrow-right-long text-sm" style="color: #ffffff;"></i>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative flex items-center p-[15px] border border-[#F2F2F2] rounded-lg gap-5 hover:shadow-md transition"
+              aria-labelledby="category-3">
+              <div class="flex flex-col gap-1">
+                <h3 id="category-3" class="leading-none font-semibold text-base">
+                  Near Me
+                </h3>
+                <p class="text-base leading-tight">This is the most extensive list of Free OnlyFans with more than 1M
+                  accounts!</p>
+                <span class="text-[14px] leading-none font-bold text-[#555555]">+800k accounts</span>
+              </div>
+              <div class="size-[30px] min-w-[30px] bg-black rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-arrow-right-long text-sm" style="color: #ffffff;"></i>
+              </div>
+            </a>
+            <a href="javascript:void(0)"
+              class="relative flex items-center p-[15px] border border-[#F2F2F2] rounded-lg gap-5 hover:shadow-md transition"
+              aria-labelledby="category-4">
+              <div class="flex flex-col gap-1">
+                <h3 id="category-4" class="leading-none font-semibold text-base">
+                  Best Tiktok OnlyFans
+                </h3>
+                <p class="text-base leading-tight">This is the most extensive list of Free OnlyFans with more than 1M
+                  accounts!</p>
+                <span class="text-[14px] leading-none font-bold text-[#555555]">+800k accounts</span>
+              </div>
+              <div class="size-[30px] min-w-[30px] bg-black rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-arrow-right-long text-sm" style="color: #ffffff;"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full h-auto relative transition duration-500 ease-linear">
+      <div
+        class="flex justify-center items-center flex-wrap w-full py-0 px-5 md:px-[50px] tablet:px-[100px] max-w-[1600px] my-0 mx-auto relative">
+        <div class="flex flex-col gap-5 w-full py-5 px-0">
+          <div class="flex items-center justify-between gap-5">
+            <h2 class="font-bold text-lg md:text-xl tablet:text-2xl">
+              <a href="#">Top Countries</a>
+            </h2>
+            <a href="#"
+              class="bg-white border border-[#ebebeb] flex items-center gap-2 font-bold py-1 px-2.5 rounded-md text-base">
+              View All
+              <i class="fa-solid fa-up-right-from-square pointer-events-none text-sm" style="color: #555555;"></i>
+            </a>
+          </div>
+          <div class="-mt-4">
+            <p class="leading-tight">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum delectus dolor tempora minima architecto sed
+              cupiditate ratione rerum recusandae eius!
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full gap-5">
+            <a href="javascript:void(0)" class="flex relative transition rounded-lg overflow-hidden group"
+              aria-labelledby="country-name-italy">
+              <picture class="flex aspect-square pointer-events-none">
+                <img src="/public/assets/img/countries/it.jpeg" alt="Flag of Italy"
+                  class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110">
+              </picture>
+              <div
+                class="absolute bottom-0 left-0 right-0 w-full p-5 flex justify-center bg-country-card-info-linear-gradient">
+                <h3 id="country-name-italy" class="text-[18px] font-semibold text-white text-center">
+                  Italy</h3>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="flex relative transition rounded-lg overflow-hidden group"
+              aria-labelledby="country-name-us">
+              <picture class="flex aspect-square pointer-events-none">
+                <img src="/public/assets/img/countries/us.jpeg" alt="Flag of USA"
+                  class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110">
+              </picture>
+              <div
+                class="absolute bottom-0 left-0 right-0 w-full p-5 flex justify-center bg-country-card-info-linear-gradient">
+                <h3 id="country-name-us" class="text-[18px] font-semibold text-white text-center">
+                  United States</h3>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="flex relative transition rounded-lg overflow-hidden group"
+              aria-labelledby="country-name-france">
+              <picture class="flex aspect-square pointer-events-none">
+                <img src="/public/assets/img/countries/fr.jpeg" alt="Flag of France"
+                  class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110">
+              </picture>
+              <div
+                class="absolute bottom-0 left-0 right-0 w-full p-5 flex justify-center bg-country-card-info-linear-gradient">
+                <h3 id="country-name-france" class="text-[18px] font-semibold text-white text-center">
+                  France</h3>
+              </div>
+            </a>
+            <a href="javascript:void(0)" class="flex relative transition rounded-lg overflow-hidden group"
+              aria-labelledby="country-name-colombia">
+              <picture class="flex aspect-square pointer-events-none">
+                <img src="/public/assets/img/countries/co.jpeg" alt="Flag of Colombia"
+                  class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:scale-110">
+              </picture>
+              <div
+                class="absolute bottom-0 left-0 right-0 w-full p-5 flex justify-center bg-country-card-info-linear-gradient">
+                <h3 id="country-name-colombia" class="text-[18px] font-semibold text-white text-center">
+                  Colombia</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="block tablet:hidden fixed left-0 right-0 bottom-0 z-[998] w-full bg-white">
+    <div class="h-[70px] py-0 px-[50px] w-full max-w-[1600] my-0 mx-auto flex items-center justify-center">
+      <div class="flex flex-nowrap h-full relative z-[995] w-full">
+        <a href="#" class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1">
+          <i class="fa-solid fa-gift text-2xl pointer-events-none" style="color: #151515;"></i>
+          <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Free
+            Onlyfans</span>
+        </a>
+        <a href="#" class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1">
+          <i class="fa-regular fa-star text-2xl pointer-events-none" style="color: #151515;"></i>
+          <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Free
+            Trials</span>
+        </a>
+        <button class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1 search"
+          data-expand="link-search">
+          <i class="fa-solid fa-magnifying-glass text-2xl pointer-events-none" style="color: #151515;"></i>
+          <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Search</span>
+        </button>
+        <a href="#" class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1">
+          <i class="fa-solid fa-location-dot text-2xl pointer-events-none" style="color: #151515;"></i>
+          <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Near
+            Me</span>
+        </a>
+        <button class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1 more"
+          data-expand="link-more">
+          <i class="fa-solid fa-ellipsis-h text-2xl pointer-events-none" style="color: #151515;"></i>
+          <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Search</span>
+        </button>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 p-0 pb-7 z-[888] shadow-md">
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="w-full bg-white relative overflow-hidden border border-[#f7f7f7] pb-[70px] md:pb-0">
+    <div
+      class="flex justify-between items-center flex-wrap gap-5 max-w-[1600px] min-h-[70px] my-0 mx-auto flex-col py-10 px-5 md:px-[100px] relative">
+      <div class="w-full flex flex-col md:flex-row items-center md:items-start flex-nowrap gap-5 md:gap-[100px]">
+        <div class="flex flex-col items-center md:items-start gap-4 max-w-[400px]">
+          <div class="">
+            <img src="/public/assets/img/logo.svg" alt="Logo" height="30" class="h-6 w-fit">
+          </div>
+          <div class="flex flex-col gap-2.5 w-full">
+            <p class="text-[#555555] max-w-[400px] text-sm leading-snug text-center md:text-start">Search Onlyfans
+              accounts in DudJob, the most
+              complete OnlyFans database. <a href="#" class="underline text-inherit hover:no-underline">Conditions</a>
+              and
+              <a href="#" class="underline text-inherit hover:no-underline">Privacy Policy</a>. This website uses
+              reCAPTCHA, Google Privacy
+              Policy and Terms of Service
+              apply.
+            </p>
+          </div>
+        </div>
+        <nav
+          class="flex w-full md:w-auto flex-col md:flex-row border-t md:border-t-0 border-t-[#f9f9f9] md:justify-end gap-[30px] flex-1">
+          <div class="flex flex-col gap-2.5 flex-1 max-w-[150px] relative">
+            <input type="checkbox" name="fropdown-footer" id="Navigation1" checked class="absolute invisible opacity-0">
+            <label for="Navigation1"
+              class="flex items-center justify-between font-bold text-base whitespace-nowrap">Find Onlyfans</label>
+            <div class="flex flex-col gap-2.5">
+              <a href="#" class="py-[5px] px-0">Best Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Free Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Onlyfans Near Me</a>
+              <a href="#" class="py-[5px] px-0">Sitemap</a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2.5 flex-1 max-w-[150px] relative">
+            <input type="checkbox" name="fropdown-footer" id="Navigation2" checked class="absolute invisible opacity-0">
+            <label for="Navigation2"
+              class="flex items-center justify-between font-bold text-base whitespace-nowrap">Onlyfans
+              Categories</label>
+            <div class="flex flex-col gap-2.5">
+              <a href="#" class="py-[5px] px-0">Link Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Link Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Link Onlyfans</a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2.5 flex-1 max-w-[150px] relative">
+            <input type="checkbox" name="fropdown-footer" id="Navigation3" checked class="absolute invisible opacity-0">
+            <label for="Navigation3"
+              class="flex items-center justify-between font-bold text-base whitespace-nowrap">Legal</label>
+            <div class="flex flex-col gap-2.5">
+              <a href="#" class="py-[5px] px-0">Terms of use</a>
+              <a href="#" class="py-[5px] px-0">Privacy Policy</a>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
