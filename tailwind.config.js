@@ -14,6 +14,7 @@ module.exports = {
         'h2-clamp': "clamp(20px, 1.25vw + 8px, 24px)",
         'h3-ranking-model-clamp': "clamp(16px, 1.25vw + 8px, 24px)",
         'username-ranking-model-clamp': "clamp(14px, 1.25vw + 8px, 16px)",
+        'profile-model-clamp': "clamp(14px,1.25vw + 8px,14px)",
       },
       backgroundImage: {
         'country-card-info-linear-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%)',
@@ -56,6 +57,9 @@ module.exports = {
         },
         '.btn-ranking-model-free-trial-link': {
           '@apply flex items-center justify-center gap-[7.5px] h-11 rounded-md font-semibold bg-[#ffb72b80] text-[#333333] whitespace-nowrap py-0 px-5 text-p-clamp w-full small-mobile:w-auto flex-[unset] small-mobile:flex-1 transition duration-200 ease-in-out hover:bg-[#ffb72b]': {},
+        },
+        '.paragraph-anchor-link': {
+          '@apply underline text-inherit font-bold transition ease-in-out duration-200 hover:no-underline': {},
         },
       });
     },
