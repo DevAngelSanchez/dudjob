@@ -76,16 +76,11 @@
         <div class="w-full">
           <div class="w-full flex justify-center items-center gap-2.5">
             <div class="flex items-center justify-center flex-wrap gap-2.5">
-              <a href="#"
-                class="transition py-[6px] leading-none px-2.5 border border-[#fb6f92] rounded-md font-semibold hover:filter-link-active">All</a>
-              <a href="#"
-                class="transition py-[6px] leading-none px-2.5 border border-[#fb6f92] rounded-md font-semibold filter-link-active">America</a>
-              <a href="#"
-                class="transition py-[6px] leading-none px-2.5 border border-[#fb6f92] rounded-md font-semibold hover:filter-link-active">Africa</a>
-              <a href="#"
-                class="transition py-[6px] leading-none px-2.5 border border-[#fb6f92] rounded-md font-semibold hover:filter-link-active">Asia</a>
-              <a href="#"
-                class="transition py-[6px] leading-none px-2.5 border border-[#fb6f92] rounded-md font-semibold hover:filter-link-active">Oceania</a>
+              <a href="#" class="btn-filter-tag hover:filter-link-active">All</a>
+              <a href="#" class="btn-filter-tag filter-link-active">America</a>
+              <a href="#" class="btn-filter-tag hover:filter-link-active">Africa</a>
+              <a href="#" class="btn-filter-tag hover:filter-link-active">Asia</a>
+              <a href="#" class="btn-filter-tag hover:filter-link-active">Oceania</a>
             </div>
           </div>
         </div>
@@ -351,40 +346,148 @@
 
   </main>
 
-  <div class="block tablet:hidden fixed left-0 right-0 bottom-0 z-[998] w-full bg-white">
-    <div class="h-[70px] py-0 px-[50px] w-full max-w-[1600] my-0 mx-auto flex items-center justify-center">
-      <div class="flex flex-nowrap h-full relative z-[995] w-full">
-        <a href="#" class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1">
+  <nav class="mobileMenu-container">
+    <div class="mobileMenu-wrapper">
+      <div class="mobileMenu-links">
+        <a href="#" class="mobileMenu-link">
           <i class="fa-solid fa-gift text-2xl pointer-events-none" style="color: #151515;"></i>
           <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Free
             Onlyfans</span>
         </a>
-        <a href="#" class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1">
-          <i class="fa-regular fa-star text-2xl pointer-events-none" style="color: #151515;"></i>
+        <a href="#" class="mobileMenu-link">
+          <i class="fa-regular fa-star text-2xl pointer-events-none" style="color: #fb6f92"></i>
           <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Free
             Trials</span>
         </a>
-        <button class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1 search"
-          data-expand="link-search">
+        <button class="mobileMenu-link search" data-expand="link-search">
           <i class="fa-solid fa-magnifying-glass text-2xl pointer-events-none" style="color: #151515;"></i>
           <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Search</span>
         </button>
-        <a href="#" class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1">
+        <a href="#" class="mobileMenu-link">
           <i class="fa-solid fa-location-dot text-2xl pointer-events-none" style="color: #151515;"></i>
           <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Near
             Me</span>
         </a>
-        <button class="py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1 more"
-          data-expand="link-more">
-          <i class="fa-solid fa-ellipsis-h text-2xl pointer-events-none" style="color: #151515;"></i>
+        <button class="mobileMenu-link more" data-expand="link-more">
+          <i class="fa-solid fa-ellipsis-h text-2xl pointer-events-none" style="color: #fb6f92;"></i>
           <span class="text-[#151515] text-xs font-semibold leading-tight pointer-events-none text-center">Search</span>
         </button>
       </div>
-      <div class="absolute bottom-0 left-0 right-0 p-0 pb-7 z-[888] shadow-md">
-
+      <div class="mobileMenu-expandedLink">
+        <div class="expandedLink-content" id="link-more">
+          <div class="expandedLink-items">
+            <div class="expandedLink-item">
+              <div class="expandedLink-item-link">
+                <a href="/watch/" class="expandedLink-item-name">
+                  <span>All Categories</span>
+                </a>
+              </div>
+              <div class="expandedLink-item-link" style="background-color: #fb6f9229;">
+                <a href="/onlyfans-free-trial-links" class="expandedLink-item-name">
+                  <span>Free Trials</span>
+                </a>
+              </div>
+              <div class="expandedLink-item-link">
+                <a href="/search-onlyfans-by-location/" class="expandedLink-item-name">
+                  <span>Countries</span>
+                </a>
+              </div>
+              <div class="expandedLink-item-link">
+                <a href="/new-onlyfans-accounts" class="expandedLink-item-name">
+                  <span>New Accounts</span>
+                </a>
+              </div>
+              <div class="expandedLink-item-link">
+                <a href="/best-onlyfans" class="expandedLink-item-name">
+                  <span>Best Accounts</span>
+                </a>
+              </div>
+              <div class="expandedLink-item-link">
+                <a href="/top-models-onlyfans" class="expandedLink-item-name">
+                  <span>Our Recommendation</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="expandedLink-content" id="link-search">
+          <form action="/onlyfans-search" class="input-wrapper">
+            <div class="input-text add-padding-left inline">
+              <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input type="search" name="q" id="search-mobile" autocomplete="off"
+                placeholder="Search by model name or user"
+                class="bg-white py-[12px] px-5 pl-10 h-10 rounded-lg outline-0 transition duration-200 w-full text-sm text-[#333333] border border-[#ebebeb]">
+              <div class="input-submit">
+                <button type="submit" class="mobileMenu-btn-search">
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
+  </nav>
+
+  <footer class="w-full bg-white relative overflow-hidden border border-[#f7f7f7] pb-[70px] md:pb-0">
+    <div
+      class="flex justify-between items-center flex-wrap gap-5 max-w-[1600px] min-h-[70px] my-0 mx-auto flex-col py-10 px-5 md:px-[100px] relative">
+      <div class="w-full flex flex-col md:flex-row items-center md:items-start flex-nowrap gap-5 md:gap-[100px]">
+        <div class="flex flex-col items-center md:items-start gap-4 max-w-[400px]">
+          <div class="">
+            <img src="/public/assets/img/logo.svg" alt="Logo" height="30" class="h-6 w-fit">
+          </div>
+          <div class="flex flex-col gap-2.5 w-full">
+            <p class="text-[#555555] max-w-[400px] text-sm leading-snug text-center md:text-start">Search Onlyfans
+              accounts in DudJob, the most
+              complete OnlyFans database. <a href="#" class="underline text-inherit hover:no-underline">Conditions</a>
+              and
+              <a href="#" class="underline text-inherit hover:no-underline">Privacy Policy</a>. This website uses
+              reCAPTCHA, Google Privacy
+              Policy and Terms of Service
+              apply.
+            </p>
+          </div>
+        </div>
+        <div class="footer-navigation">
+          <nav class="sites-links" aria-label="Top Categories">
+            <input type="checkbox" name="dropdown-footer" id="Navigation1" checked class="absolute invisible opacity-0">
+            <label for="Navigation1"
+              class="flex py-5 md:py-0 cursor-pointer md:cursor-default items-center justify-between font-bold text-base whitespace-nowrap">Top
+              Categories</label>
+            <div class="dropdown-content overflow-auto">
+              <a href="#" class="py-[5px] px-0">Best Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Free Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Onlyfans Near Me</a>
+              <a href="#" class="py-[5px] px-0">Sitemap</a>
+            </div>
+          </nav>
+          <nav class="sites-links" aria-label="Legal Information">
+            <input type="checkbox" name="dropdown-footer" id="Navigation2" checked class="absolute invisible opacity-0">
+            <label for="Navigation2"
+              class="flex py-5 md:py-0 cursor-pointer md:cursor-default items-center justify-between font-bold text-base whitespace-nowrap">Legal
+              Information</label>
+            <div class="dropdown-content">
+              <a href="#" class="py-[5px] px-0">Link Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Link Onlyfans</a>
+              <a href="#" class="py-[5px] px-0">Link Onlyfans</a>
+            </div>
+          </nav>
+          <nav class="sites-links" aria-label="Most Visited">
+            <input type="checkbox" name="dropdown-footer" id="Navigation3" checked class="absolute invisible opacity-0">
+            <label for="Navigation3"
+              class="flex py-5 md:py-0 cursor-pointer md:cursor-default items-center justify-between font-bold text-base whitespace-nowrap">Legal</label>
+            <div class="dropdown-content">
+              <a href="#" class="py-[5px] px-0">Terms of use</a>
+              <a href="#" class="py-[5px] px-0">Privacy Policy</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

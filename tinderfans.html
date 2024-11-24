@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dudjob | Not Found</title>
+  <title>Dudjob | Profile</title>
   <link rel="icon" href="/public/assets/img/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-white text-[#333333] min-h-screen">
+<body class="bg-white text-[#333333]">
   <header class="flex flex-col sticky top-0 w-full z-50 bg-white">
     <div
       class="min-h-[70px] max-w-[1600px] mx-auto my-0 w-full flex flex-col items-center justify-center pt-0 px-5 md:px-[50px] tablet:px-[100px]">
@@ -61,27 +61,205 @@
   </header>
 
   <main class="flex flex-col w-full min-h-[calc(100vh - 250px - 70px - 40px)] relative z-[1] pb-[70px]">
-    <section class="w-full h-auto relative transition duration-500 ease-linear">
-      <div
-        class="flex justify-center items-center flex-wrap w-full py-0 px-5 md:px-[50px] tablet:px-[100px] max-w-[1600px] my-0 mx-auto relative">
-        <div
-          class="flex flex-col items-center justify-center gap-[5px] min-h-[calc(100vh - 250px - 70px - 40px)] py-[150px] px-0">
-          <p class="text-[40px] font-bold flex leading-[0.8]">404</p>
-          <h1 class="text-title-not-found-clamp leading-none font-bold">
-            Page not Found
-          </h1>
-          <p class="text-lg text-[#333333] max-w-[700px] text-center">The pages you are looking for do not exist or have
-            been
-            deleted.</p>
-          <div class="flex flex-col items-center gap-2.5 mt-5">
-            <a href="/" class="btn-not-found">
-              <i class="fa-solid fa-house text-white text-sm"></i>
-              Go to Homepage
+
+    <div class="py-5 px-5 tablet:py-10">
+      <div class="flex flex-col items-center">
+        <div class="swipeModel-selector-container">
+          <div class="flex flex-col justify-center items-center gap-[5px]">
+            <h1 class="text-main-title-clamp font-bold text-center leading-none">Discover accounts on Dudjob</h1>
+            <p class="text-p-clamp text-[#333333] text-center">Select an option to begin</p>
+          </div>
+          <div class="grid grid-cols-2 gap-5 w-full">
+            <a href="javascript:void(0);" class="swipeModel-selector-card female">
+              <picture class="flex size-full">
+                <img src="/public/assets/img/swiper/female.png" alt="" class="size-full object-cover">
+              </picture>
+              <div class="absolute bottom-0 w-full h-[50px] z-[1] flex justify-center items-center bg-[#fb6f92bf]">
+                <p class="font-bold text-2xl text-white">Girls</p>
+              </div>
+            </a>
+            <a href="javascript:void(0);" class="swipeModel-selector-card male">
+              <picture class="flex size-full">
+                <img src="/public/assets/img/swiper/male.png" alt="" class="size-full object-cover">
+              </picture>
+              <div class="absolute bottom-0 w-full h-[50px] z-[1] flex justify-center items-center bg-[#0082b2bf]">
+                <p class="font-bold text-2xl text-white">Boys</p>
+              </div>
             </a>
           </div>
         </div>
+        <div class="swipeModel-cards hidden">
+          <div class="flex items-center justify-between pb-5">
+            <div class="swipeModel-title">
+              <p class="text-2xl font-bold text-[#333333]">
+                Discover Accounts
+              </p>
+            </div>
+            <div class="swipeModel-options">
+              <div class="select-container swipeModel-gender female">
+                <input type="hidden" id="swipeModel-gender" name="swipeModel-gender" value="female">
+                <div class="select-default">
+                  <button class="select-default-button flex items-center gap-3 female">
+                    <p class="text-p-clamp text-inherit leading-none">Girl</p>
+                    <i class="fa-solid fa-angle-down text-[#333333] text-xs"></i>
+                  </button>
+                </div>
+                <div class="select-wrapper">
+                  <div class="select-options">
+                    <button type="button" value="female" data-name="Girl" class="select-option female">
+                      <p class="text-inherit flex items-center gap-[5px] font-semibold">
+                        <i class="fa-solid fa-venus text-inherit text-sm"></i>
+                        Girl
+                      </p>
+                    </button>
+                    <button type="button" value="female" data-name="Girl" class="select-option male">
+                      <p class="text-inherit flex items-center gap-[5px] font-semibold">
+                        <i class="fa-solid fa-mars text-inherit text-sm"></i>
+                        Boys
+                      </p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="model-cards-container" class="swipe-cards">
+            <div class="swipe-model" data-profile="https://dudjob.com/jane_doe/profile"
+              data-url="https://onlyfans.com/jane_doe">
+              <div class="swipe-model-card">
+                <div class="swipe-model-picture">
+                  <img src="public/assets/img/model-1.png" alt="Jane Doe" class="size-full object-cover">
+                </div>
+                <div class="swipe-model-content">
+                  <div class="model-info">
+                    <p class="model-name">Jane Doe</p>
+                    <p class="model-username">@jane_doe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="choice nope">
+                NOPE
+              </div>
+              <div class="choice like">
+                LIKE
+              </div>
+            </div>
+            <div
+              class="swipe-model before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[40%] before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)0%,rgba(0,0,0,0.75)100%)] before:rounded-b-[15px]"
+              data-profile="https://dudjob.com/jane_doe/profile" data-url="https://onlyfans.com/jane_doe">
+              <div class="swipe-model-card">
+                <div class="swipe-model-picture">
+                  <img src="public/assets/img/model-1.png" alt="Jane Doe" class="size-full object-cover">
+                </div>
+                <div class="swipe-model-content">
+                  <div class="model-info">
+                    <p class="model-name">Jane Doe</p>
+                    <p class="model-username">@jane_doe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="choice nope">
+                NOPE
+              </div>
+              <div class="choice like">
+                LIKE
+              </div>
+            </div>
+            <div
+              class="swipe-model before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[40%] before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)0%,rgba(0,0,0,0.75)100%)] before:rounded-b-[15px]"
+              data-profile="https://dudjob.com/jane_doe/profile" data-url="https://onlyfans.com/jane_doe">
+              <div class="swipe-model-card">
+                <div class="swipe-model-picture">
+                  <img src="public/assets/img/model-1.png" alt="Jane Doe" class="size-full object-cover">
+                </div>
+                <div class="swipe-model-content">
+                  <div class="model-info">
+                    <p class="model-name">Jane Doe</p>
+                    <p class="model-username">@jane_doe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="choice nope">
+                NOPE
+              </div>
+              <div class="choice like">
+                LIKE
+              </div>
+            </div>
+            <div
+              class="swipe-model before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[40%] before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)0%,rgba(0,0,0,0.75)100%)] before:rounded-b-[15px]"
+              data-profile="https://dudjob.com/jane_doe/profile" data-url="https://onlyfans.com/jane_doe">
+              <div class="swipe-model-card">
+                <div class="swipe-model-picture">
+                  <img src="public/assets/img/model-1.png" alt="Jane Doe" class="size-full object-cover">
+                </div>
+                <div class="swipe-model-content">
+                  <div class="model-info">
+                    <p class="model-name">Jane Doe</p>
+                    <p class="model-username">@jane_doe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="choice nope">
+                NOPE
+              </div>
+              <div class="choice like">
+                LIKE
+              </div>
+            </div>
+            <div
+              class="swipe-model before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[40%] before:w-full before:bg-[linear-gradient(180deg,rgba(0,0,0,0)0%,rgba(0,0,0,0.75)100%)] before:rounded-b-[15px]"
+              data-profile="https://dudjob.com/jane_doe/profile" data-url="https://onlyfans.com/jane_doe">
+              <div class="swipe-model-card">
+                <div class="swipe-model-picture">
+                  <img src="public/assets/img/model-1.png" alt="Jane Doe" class="size-full object-cover">
+                </div>
+                <div class="swipe-model-content">
+                  <div class="model-info">
+                    <p class="model-name">Jane Doe</p>
+                    <p class="model-username">@jane_doe</p>
+                  </div>
+                </div>
+              </div>
+              <div class="choice nope">
+                NOPE
+              </div>
+              <div class="choice like">
+                LIKE
+              </div>
+            </div>
+            <div class="swipe-empty">
+              <p class="text-p-clamp text-black">No hay más personas cerca de ti</p>
+              <p class="text-p-clamp text-black">Vuelve a intentarlo más tarde</p>
+            </div>
+          </div>
+          <div class="model-options">
+            <div class="model-options-wrapper mb-5">
+              <a target="_blank" class="model-option profile">
+                <i class="fa-solid fa-eye leading-none text-xl text-[#333333]"></i>
+                View Profile
+              </a>
+              <div class="model-options-control grid grid-cols-2 gap-2.5 w-full">
+                <a href="javascript:void(0);" class="model-option pass">
+                  <i class="fa-solid fa-thumbs-up leading-none text-xl text-white rotate-180"></i>
+                  Dislike
+                </a>
+                <div class="model-option-like relative">
+                  <a class="model-option like ">
+                    <i class="fa-solid fa-heart leading-none text-xl text-white"></i>
+                    Like
+                  </a>
+                  <a class="model-option like-of" target="_blank">
+                    <i class="fa-solid fa-heart leading-none text-xl text-white"></i>
+                    Like
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
 
   </main>
 
@@ -228,7 +406,8 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/swipe.js"></script>
 </body>
 
 </html>
