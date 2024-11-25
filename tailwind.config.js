@@ -15,6 +15,7 @@ module.exports = {
         'h3-ranking-model-clamp': "clamp(16px, 1.25vw + 8px, 24px)",
         'username-ranking-model-clamp': "clamp(14px, 1.25vw + 8px, 16px)",
         'profile-model-clamp': "clamp(14px,1.25vw + 8px,14px)",
+        'mobileMenu-span-clamp': "clamp(10px,1.25vw + 8px,10px)",
       },
       backgroundImage: {
         'country-card-info-linear-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%)',
@@ -225,7 +226,7 @@ module.exports = {
           '@apply flex flex-nowrap h-full relative z-[995] w-full': {},
         },
         '.mobileMenu-link': {
-          '@apply py-[5px] px-5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1': {},
+          '@apply py-[5px] px-2.5 min-w-[50px] flex flex-col justify-center items-center gap-[5px] flex-1': {},
         },
         '.mobileMenu-expandedLink': {
           '@apply absolute bottom-0 left-0 right-0 p-0 pb-[70px] z-[888] shadow-md': {},
@@ -291,7 +292,7 @@ module.exports = {
           '@apply flex': {},
         },
         '.pagination-input input': {
-          '@apply h-10 border border-[#cccccc] border-r-0 rounded-tl-md rounded-bl-md p-2.5 text-sm w-[70px] outline-none': {},
+          '@apply h-10 border border-[#cccccc] border-r-0 rounded-tl-md rounded-bl-md p-2.5 text-sm w-[70px] outline-none appearance-none': {},
         },
         '.pagination-search-btn': {
           '@apply bg-[#ffb3c6] rounded-tr-md rounded-br-md py-0 px-2.5 border border-[#cccccc] border-l-[none]': {},
