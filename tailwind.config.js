@@ -301,7 +301,7 @@ module.exports = {
           '@apply text-white': {},
         },
         '.pagination-btn': {
-          '@apply flex gap-[5px] py-[5px] px-2.5 page-count-shadow size-10 items-center justify-center': {},
+          '@apply flex gap-[5px] py-[5px] px-2.5 page-count-shadow size-10 items-center justify-center rounded-lg': {},
         },
         '.pagination-btn i': {
           '@apply text-[#fb6f92]': {},
