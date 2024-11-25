@@ -1,32 +1,13 @@
 const DECISION_THRESHOLD = 100
 let isAnimating = false
 let pullDeltaX = 0
-let viewCount = parseInt(localStorage.getItem('viewCount')) || 0;
-let freeSpinCount = parseInt(localStorage.getItem('spinCount')) || 0;
-// Cuantas modelos hay que ver para ganar 1 spin
-let modelsView = 15;
 
-function updateSpinCount() {
-  localStorage.setItem('spinCount', freeSpinCount);
-}
+// Global variables
+let femaleModels = []; // Array to store female models
+let maleModels = [];   // Array to store male models
+let minModelsCount = 10; // Counter for loaded models
+let gender = ''; // Global variable to store the selected gender
 
-function updateViewCount() {
-  localStorage.setItem('viewCount', viewCount);
-}
-
-function incrementViewCount() {
-  viewCount++;
-  updateViewCount();
-
-  if (viewCount % modelsView === 0) {
-    freeSpinCount++;
-    updateSpinCount()
-  }
-}
-
-function onViewModel() {
-  incrementViewCount();
-}
 
 function checkModelUrls() {
   let modelCard = document.querySelectorAll('.swipe-model')[0]
@@ -59,7 +40,6 @@ function checkModelUrls() {
   }
 
 }
-
 document.addEventListener('DOMContentLoaded', checkModelUrls)
 
 function startDrag(event) {
@@ -171,7 +151,6 @@ function startDrag(event) {
       const goLike = pullDeltaX >= 0
 
       checkNextCard();
-      incrementViewCount()
 
       if (goLike) {
         // Logica cuando se da Like
@@ -182,7 +161,8 @@ function startDrag(event) {
 
       actualCard.classList.add(goLike ? 'go-right' : 'go-left')
       actualCard.addEventListener('transitionend', () => {
-        actualCard.remove()
+        actualCard.remove();
+        renderModels(); // Render new models using the global gender variable
       })
     } else {
       actualCard.classList.add('reset')
@@ -232,7 +212,6 @@ function swipeOnClick(ms) {
   }, ms);
 
   setTimeout(() => {
-    incrementViewCount()
     firstModelCard.remove();
     checkModelUrls();
     optionsWrapper.classList.remove('load')
@@ -263,33 +242,38 @@ optionsWrapper.addEventListener('click', (e) => {
   }
 })
 
-
-// Array de modelos a renderizar
-let models = [];
-
-// Función para renderizar modelos en el contenedor
-function renderModels(models) {
+// Function to render models in the container
+function renderModels() {
+  const models = gender === 'female' ? femaleModels : maleModels; // Use the global gender variable
   const container = document.getElementById('model-cards-container');
-  container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevas cards
 
-  models.forEach((model) => {
-    // Crear una nueva card de modelo
+  // Ensure there are always 3 models in the container
+  while (container.children.length < 3) {
+    if (models.length < minModelsCount) {
+      fetchMoreModels(gender); // Fetch more models if needed
+      return; // Exit if we are fetching more models
+    }
+
+    const model = models.shift(); // Get and remove the first element of the array
+    if (!model) break; // Exit if there are no more models
+
+    // Create a new model card
     const modelCard = document.createElement('div');
     modelCard.classList.add('swipe-model');
     if (model.feature) modelCard.classList.add('featured');
 
-    modelCard.setAttribute('data-profile', model.url_profile);
+    modelCard.setAttribute('data-profile', model.url);
     modelCard.setAttribute('data-url', model.url_of);
 
-    // Construir el contenido de la card
+    // Build the content of the card
     modelCard.innerHTML = `
             <div class="swipe-model-card">
                 <div class="swipe-model-picture">
-                    <img src="${model.imageUrl}" alt="${model.nombre}" />
+                    <img src="${model.imageUrl}" alt="${model.name}" />
                 </div>
                 <div class="swipe-model-content">
                     <div class="model-info">
-                    <p class="model-name">${model.nombre}</p>
+                    <p class="model-name">${model.name}</p>
                     <p class="model-username">@${model.username}</p>
                     </div>
                 </div>
@@ -298,139 +282,60 @@ function renderModels(models) {
             <div class="choice like">LIKE</div>
         `;
 
-    // Agregar la card al contenedor
+    // Add the card to the container
     container.appendChild(modelCard);
-  });
+  }
 
-  // Insertar el mensaje de "no hay más personas" al final
-  const emptyMessage = document.createElement('div');
-  emptyMessage.classList.add('swipe-empty');
-  emptyMessage.innerHTML = `
-        <p>No hay más personas cerca de ti</p>
-        <p>Vuelve a intentarlo más tarde</p>
-    `;
-  container.appendChild(emptyMessage);
-}
 
-// Función para usar datos de prueba si el fetch falla
-function useMockData(gender) {
-  const mockData = gender === 'female' ? [
-    {
-      "nombre": "Jane Doe",
-      "username": "jane_doe",
-      "url_profile": "https://dudjob.com/jane_doe/profile",
-      "url_of": "https://onlyfans.com/jane_doe",
-      "imageUrl": "/static/images/models/model-1.png",
-      "feature": false
-    },
-    {
-      "nombre": "Emily Davis",
-      "username": "emily_davis",
-      "url_profile": "https://dudjob.com/emily_davis/profile",
-      "url_of": "https://onlyfans.com/emily_davis",
-      "imageUrl": "/static/images/models/model-2.png",
-      "feature": true
-    },
-    {
-      "nombre": "Sophia Martinez",
-      "username": "sophia_martinez",
-      "url_profile": "https://dudjob.com/sophia_martinez/profile",
-      "url_of": "https://onlyfans.com/sophia_martinez",
-      "imageUrl": "/static/images/models/model-3.png",
-      "feature": false
-    },
-    {
-      "nombre": "Olivia Taylor",
-      "username": "olivia_taylor",
-      "url_profile": "https://dudjob.com/olivia_taylor/profile",
-      "url_of": "https://onlyfans.com/olivia_taylor",
-      "imageUrl": "/static/images/models/model-4.png",
-      "feature": true
-    },
-    {
-      "nombre": "Ava Anderson",
-      "username": "ava_anderson",
-      "url_profile": "https://dudjob.com/ava_anderson/profile",
-      "url_of": "https://onlyfans.com/ava_anderson",
-      "imageUrl": "/static/images/models/model-1.png",
-      "feature": false
-    }
-  ] : [
-    {
-      "nombre": "John Doe",
-      "username": "john_doe",
-      "url_profile": "https://dudjob.com/john_doe/profile",
-      "url_of": "https://onlyfans.com/john_doe",
-      "imageUrl": "/static/images/image-not-found/male/1.png",
-      "feature": true
-    },
-    {
-      "nombre": "James Smith",
-      "username": "james_smith",
-      "url_profile": "https://dudjob.com/james_smith/profile",
-      "url_of": "https://onlyfans.com/james_smith",
-      "imageUrl": "/static/images/image-not-found/male/2.png",
-      "feature": false
-    },
-    {
-      "nombre": "Robert Johnson",
-      "username": "robert_johnson",
-      "url_profile": "https://dudjob.com/robert_johnson/profile",
-      "url_of": "https://onlyfans.com/robert_johnson",
-      "imageUrl": "/static/images/image-not-found/male/3.png",
-      "feature": true
-    },
-    {
-      "nombre": "Michael Brown",
-      "username": "michael_brown",
-      "url_profile": "https://dudjob.com/michael_brown/profile",
-      "url_of": "https://onlyfans.com/michael_brown",
-      "imageUrl": "/static/images/image-not-found/male/4.png",
-      "feature": false
-    },
-    {
-      "nombre": "David Williams",
-      "username": "david_williams",
-      "url_profile": "https://dudjob.com/david_williams/profile",
-      "url_of": "https://onlyfans.com/david_williams",
-      "imageUrl": "/static/images/image-not-found/male/5.png",
-      "feature": true
-    }
-  ];
-
-  models = mockData;
-  console.log(`Fetched ${gender} models using mock data:`, models);
-
-  // Renderizar los modelos con los datos de prueba
-  renderModels(models);
-}
-
-// Añadir esta función para actualizar las cards y el botón de selección
-async function updateGenderAndFetchModels(gender) {
-  // Actualiza el valor del input oculto
-  document.getElementById('swipeModel-gender').value = gender;
-
-  // Actualiza el texto del botón
-  const selectButton = document.querySelector('.select-default button');
-  selectButton.textContent = gender === 'female' ? 'Girl' : 'Boy';
-  // Lógica para obtener y renderizar modelos según el género seleccionado
-  try {
-    const response = await fetch(`${apiURL}${gender}`);
-    if (!response.ok) throw new Error('Network response was not ok');
-
-    // Suponiendo que la respuesta sea un array de modelos
-    models = await response.json();
-    renderModels(models);
-
-  } catch (error) {
-    console.error('Error fetching models:', error);
-
-    // Fallback a datos de prueba si ocurre un error
-    useMockData(gender);
+  // Show a message when there are no more models available to display
+  if (models.length == 0) {
+    const emptyMessage = document.createElement('div');
+    emptyMessage.classList.add('swipe-empty');
+    emptyMessage.innerHTML = `
+            <p>No hay más modelos disponibles</p>
+            <p>Intenta de nuevo más tarde</p>
+        `;
+    container.appendChild(emptyMessage);
   }
 }
 
-// Event listeners para los cards de selección
+// Update this function to call renderModels with the appropriate array
+async function updateGenderAndFetchModels(selectedGender) {
+  gender = selectedGender; // Update the global gender variable
+
+  // Update the hidden input value
+  document.getElementById('swipeModel-gender').value = gender;
+
+  // Update the button text
+  const selectButton = document.querySelector('.select-default button p');
+  selectButton.textContent = gender === 'female' ? 'Girl' : 'Boy';
+
+  // Clear the model cards container
+  const container = document.getElementById('model-cards-container');
+  container.innerHTML = ''; // Clear existing model cards
+
+  // Logic to fetch and render models based on the selected gender
+  try {
+    const models = gender === 'female' ? femaleModels : maleModels; // Use the preloaded models
+    if (models.length === 0) {
+      // Fetch models only if the array is empty
+      const formData = new FormData();
+      formData.append('gender', gender);
+      const response = await sendPostRequest({ url: `${apiURL}`, data: formData });
+      if (gender === 'female') {
+        femaleModels = response.data; // Store female models
+      } else {
+        maleModels = response.data; // Store male models
+      }
+    }
+    renderModels(); // Render the models using the global gender variable
+
+  } catch (error) {
+    console.error('Error fetching models:', error);
+  }
+}
+
+// Event listeners for the selection cards
 document.querySelector('.swipeModel-selector-card.female').addEventListener('click', () => {
   updateGenderAndFetchModels('female');
   setTimeout(() => {
@@ -449,45 +354,80 @@ document.querySelector('.swipeModel-selector-card.male').addEventListener('click
   document.querySelector('.swipeModel-gender').classList.add('male');
 });
 
-// Añadir este código al final del archivo
+// Add this code at the end of the file
 document.querySelectorAll('.swipeModel-selector-card').forEach(card => {
   card.addEventListener('click', () => {
-    // Ocultar el contenedor de selección
+    // Hide the selection container
     document.querySelector('.swipeModel-selector-container').classList.add('hidden');
-    // Mostrar el contenedor de tarjetas
+    // Show the cards container
     document.querySelector('.swipeModel-cards').classList.remove('hidden');
   });
 });
 
-// Añadir esta función para manejar la selección de género
+// Add this function to handle gender selection
 function selectGender(gender) {
-  // Actualiza el valor del input oculto
+  // Update the hidden input value
   document.getElementById('swipeModel-gender').value = gender;
 
-  // Actualiza el texto del botón
+  // Update the button text
   const selectButton = document.querySelector('.select-default button');
   selectButton.textContent = gender === 'female' ? 'Girl' : 'Boy';
 
-  // Llama a la función para obtener y renderizar modelos según el género seleccionado
+  // Call the function to fetch and render models based on the selected gender
   updateGenderAndFetchModels(gender);
 }
 
-// Añadir event listeners para los botones de selección
+// Add event listeners for the selection buttons
 document.querySelectorAll('.select-option').forEach(option => {
   option.addEventListener('click', () => {
-    const gender = option.value; // Obtener el valor del botón seleccionado
+    const gender = option.value; // Get the value of the selected button
     const selectButton = document.querySelector('.select-default button');
-    const genderContainer = document.querySelector('.swipeModel-gender'); // Obtener el contenedor del género
+    const genderContainer = document.querySelector('.swipeModel-gender'); // Get the gender container
 
-    // Actualiza el contenido del botón
-    selectButton.innerHTML = `<i class="icon ${option.querySelector('i').className}"></i> ${gender === 'female' ? 'Girl' : 'Boy'}`;
+    // Update the button content
+    // selectButton.innerHTML = `<i class="icon ${option.querySelector('i').className}"></i> <p> ${gender === 'female' ? 'Girl' : 'Boy'} </p>`;
 
-    // Elimina las clases de género existentes
+    // Remove existing gender classes
     genderContainer.classList.remove('female', 'male');
 
-    // Agrega la nueva clase de género
+    // Add the new gender class
     genderContainer.classList.add(gender);
 
     updateGenderAndFetchModels(gender);
   });
 });
+
+// Function to fetch models
+async function fetchModels() {
+  try {
+    const femaleResponse = await sendPostRequest({ url: `${apiURL}`, data: { gender: 'female' } }); // Fetch female models
+    femaleModels = femaleResponse.data; // Store female models in the array
+
+    const maleResponse = await sendPostRequest({ url: `${apiURL}`, data: { gender: 'male' } }); // Fetch male models
+    maleModels = maleResponse.data; // Store male models in the array
+
+  } catch (error) {
+    console.error('Error fetching models:', error);
+  }
+}
+
+// Call fetchModels when the library is loaded
+fetchModels(); // Load models on library initialization
+
+// Function to fetch more models
+async function fetchMoreModels(gender) {
+  try {
+    const formData = new FormData();
+    formData.append('gender', gender);
+    const response = await sendPostRequest({ url: `${apiURL}`, data: formData });
+
+    // Append new models to the existing array
+    if (gender === 'female') {
+      femaleModels.push(...response.data); // Add new female models
+    } else {
+      maleModels.push(...response.data); // Add new male models
+    }
+  } catch (error) {
+    console.error('Error fetching more models:', error);
+  }
+}

@@ -93,10 +93,16 @@ module.exports = {
         '.select-default-button': {
           '@apply size-full py-2.5 px-5 text-left text-[#333333] pointer-events-none text-base font-semibold rounded-[5px] whitespace-nowrap text-ellipsis': {},
         },
-        '.select-default-button.female': {
+        '.select-container.female .select-default-button': {
           '@apply text-[#fb6f92]': {},
         },
-        '.select-default-button.male': {
+        '.select-container.male .select-default-button': {
+          '@apply text-[#0082b2]': {},
+        },
+        '.select-container.female .select-default-button i': {
+          '@apply text-[#fb6f92]': {},
+        },
+        '.select-container.male .select-default-button i': {
           '@apply text-[#0082b2]': {},
         },
         '.select-wrapper': {
