@@ -311,26 +311,27 @@
       </div>
     </section>
 
-    <div class="flex items-center justify-center gap-1 my-10">
-      <a href="#"
-        class="flex items-center justify-center gap-1 py-1 px-2.5 rounded-md size-10 shadow-md shadow-black/5">
-        <i class="fa-solid fa-arrow-left" style="color: #fb6f92;"></i>
+    <div class="pagination-container py-[60px]">
+      <a rel="nofollow" class="pagination-btn prev" href="#">
+        <i class="fa-solid fa-arrow-left pagination-arrow"></i>
       </a>
-      <div class="flex gap-1">
-        <a href="#"
-          class="text-base py-1 px-2.5 size-10 rounded-md text-center shadow-md shadow-black/5 flex justify-center items-center font-bold transition relative pagination-btn-active">1</a>
-        <a href="#"
-          class="text-base py-1 px-2.5 size-10 rounded-md text-center shadow-md shadow-black/5 flex justify-center items-center font-bold transition relative hover:pagination-btn-active">2</a>
-        <a href="#"
-          class="text-base py-1 px-2.5 size-10 rounded-md text-center shadow-md shadow-black/5 flex justify-center items-center font-bold transition relative hover:pagination-btn-active">3</a>
-        <a href="#"
-          class="text-base py-1 px-2.5 size-10 rounded-md text-center shadow-md shadow-black/5 flex justify-center items-center font-bold transition relative hover:pagination-btn-active">...</a>
-        <a href="#"
-          class="text-base py-1 px-2.5 size-10 rounded-md text-center shadow-md shadow-black/5 flex justify-center items-center font-bold transition relative hover:pagination-btn-active">10</a>
+      <div class="pagination-items flex gap-[5px]">
+        <a rel="nofollow" class="page-count active" href="#">1</a>
+        <a href="javascript:void(0);" class="page-count search">
+          <span>...</span>
+          <form class="pagination-search" autocomplete="off">
+            <div class="pagination-input">
+              <input type="number" name="page" id="pagination-search" placeholder="69">
+            </div>
+            <button type="submit" class="pagination-search-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </a>
+        <a rel="nofollow" class="page-count " href="#">50</a>
       </div>
-      <a href="#"
-        class="flex items-center justify-center gap-1 py-1 px-2.5 rounded-md size-10 shadow-md shadow-black/5">
-        <i class="fa-solid fa-arrow-right" style="color: #fb6f92;"></i>
+      <a rel="nofollow" class="pagination-btn next" href="#">
+        <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
 
@@ -548,7 +549,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

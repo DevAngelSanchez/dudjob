@@ -31,6 +31,9 @@ module.exports = {
         '.text-shadow': {
           'text-shadow': '0 0 10px rgba(0, 0, 0, 0.3)',
         },
+        '.page-count-shadow': {
+          'box-shadow': '0 10px 20px 0 rgba(0, 0, 0, .05)',
+        },
       });
     },
     function ({ addComponents }) {
@@ -265,6 +268,42 @@ module.exports = {
         },
         '.btn-filter-tag': {
           '@apply transition py-[6px] leading-none px-2.5 border border-[#fb6f92] rounded-md font-semibold': {},
+        },
+        '.pagination-container': {
+          '@apply flex items-center justify-center gap-[5px]': {},
+        },
+        '.pagination-items': {
+          '@apply flex gap-[5px]': {},
+        },
+        '.page-count': {
+          '@apply text-base py-[5px] px-2.5 h-10 min-w-10 text-[#333333] rounded-lg text-center page-count-shadow flex justify-center items-center font-bold transition duration-200 relative bg-transparent': {},
+        },
+        '.page-count.active': {
+          '@apply bg-[#ffb3c6] text-black': {},
+        },
+        '.page-count span': {
+          '@apply pointer-events-none': {},
+        },
+        '.pagination-search': {
+          '@apply hidden absolute top-[calc(100%+10px)] left-[50%] -translate-x-[50%] w-[100px]': {},
+        },
+        '.pagination-search.show': {
+          '@apply flex': {},
+        },
+        '.pagination-input input': {
+          '@apply h-10 border border-[#cccccc] border-r-0 rounded-tl-md rounded-bl-md p-2.5 text-sm w-[70px] outline-none': {},
+        },
+        '.pagination-search-btn': {
+          '@apply bg-[#ffb3c6] rounded-tr-md rounded-br-md py-0 px-2.5 border border-[#cccccc] border-l-[none]': {},
+        },
+        '.pagination-search-btn i': {
+          '@apply text-white': {},
+        },
+        '.pagination-btn': {
+          '@apply flex gap-[5px] py-[5px] px-2.5 page-count-shadow size-10 items-center justify-center': {},
+        },
+        '.pagination-btn i': {
+          '@apply text-[#fb6f92]': {},
         },
       });
     },
